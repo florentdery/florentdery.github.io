@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 pagetitle: "Florent Déry"
 output: 
@@ -78,6 +77,8 @@ leaflet(areas,width = "100%") %>%
 ```
 <p style="font-size:16px" > *Interactive map of places I've been during my career so far. Click on a location for more information.* </p> 
 
+\
+
 # Future plans
 
 My current and future research focus is to model stress factors in northern ecosystems and use near-term iterative forecasting (hereafter [NTIF <i class="fa fa-external-link" style="font-size:13px"></i>](https://www.pnas.org/content/115/7/1424){target="_blank"}) approach in the context of adaptive management of harvested resources. More precisely, global changes are expected to alter trophic interactions involving consumer-resource and parasite-host relationships in northern ecosystems. Global warming and altered precipitation regime already favor the northern expansion of parasites and cause wide variations in the intensity and frequency of pest insect outbreaks. 
@@ -110,59 +111,3 @@ I speak english and french, and I know around 16 words of italian (excluding the
 
 
 <p float="left" align="middle"> Feel free to contact me if you'd like to ask questions about my work, shared interests or insights! </p>
-
-
-=======
----
-title: "Just another biologist website"
-author: ""
-output: html_document
-css: style.css
----
-
-\hspace
-
-
-___
-
-<figure>
-  <p><img src="figure/404.jpg"
-    width="256" height="192"
-    alt="404">
-  <figcaption>A fabulous mountain goat showing
-   off in the wind, summer 2016
-   Caw Ridge, near Grande Cache, AB, Canada</figcaption>
-</figure> 
-
-\hspace
-
-Hello! My name is Florent and I am currently at the last steps of a MSc project studying the drivers of vigilance in mountain goats and how it relates to their fitness. I have also worked on intrinsic and extrinsics determinants of molt timing in mountain goats before (see [visual abstract](https://www.researchgate.net/publication/331131245_Individual_condition_and_access_to_food_resources_modulate_end_of_molt_in_a_mountain_ungulate) or [publication](https://doi.org/10.1002/ece3.4970)). 
-
-\hspace
-
-My original motivation for research came from undergraduate project investigating the spatial behavior of caribou in relation to backcountry skiers (available [here](https://doi.org/10.1016/j.biocon.2017.10.030)) in Eastern Canada (Atlantic-Gaspésie mountain-dwelling caribou population). 
-
-\hspace
-
-
-## Future plans
-
-My current and future research focus is to model stress factors in northern ecosystems and use near-term iterative forecasting (hereafter [NTIF](https://www.pnas.org/content/115/7/1424)) approach in the context of adaptive management of harvested resources. More precisely, global changes are expected to alter trophic interactions involving consumer-resource and parasite-host relationships in northern ecosystems. Global warming and altered precipitation regime already favor the northern expansion of parasites and cause wide variations in the intensity and frequency of pest insect outbreaks. 
-
-<figure>
-<p><img src="figure/caribou.jpg" 
-    width="256" height="192"
-    alt= "caribou">
-  <figcaption>A female caribou in summer 2014 wandering on Mont Jacques-Cartier; Gaspesie National Park, Qc, Canada </figcaption>
-</figure> 
-
-In this context, I will start a PhD in Spring 2020 to obtain predictions from NTIF approach and provide insights on the relative contribution of environmental variability, management decisions and stress factors on trophic interactions and the resilience of two northern ecosystems. I will model the dynamics of winter tick abundance, distribution, and their effects on moose population dynamics in eastern North America. 
-
-I will also investigate the impact of geometrid moths’ outbreaks in subarctic mountain birch forests of Norway. In both systems, climate as a major role in the impact of stress factors. Indeed, cold temperature and snow cover limit winter ticks fall activity, late-winter reproduction and survival, whereas co-occurrence and abundance patterns of two geometrid moth species largely depend on temperature and birch phenology. I plan to combine several variables available at coarse and fine spatial scale and will access data inputs on yearly to daily timescale. I am now developing the pilot phase of a collaborative science program that will start this spring 2020, in which we will invite wildlife enthusiasts to submit moose observations and pictures of camera-traps. This program will provide demography and condition data in the moose system at finer spatiotemporal scale. As for the birch and moth system, I will have access to extensive database from the Climate-ecological Observatory for Arctic Tundra ([COAT](www.coat.no/en/)). In both systems, several hypotheses and relationships need to be included to accurately predict the effect of stress factors, which is why I consider NTIF the best approach to quantify where and what information must be combined to actual knowledge. 
-
-
-
-More precisely, my work will be a part of a big project to invest how climate will shape the effect of winter ticks on moose population 
-
-## (in construction)
->>>>>>> c46fea15e720f2464a74f00d62d063036d006c67
