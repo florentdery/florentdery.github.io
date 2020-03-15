@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Florent Déry</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.3/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.0.3/leaflet-providers-plugin.js"></script>
+<link href="site_libs/leaflet-markercluster-1.0.5/MarkerCluster.css" rel="stylesheet" />
+<link href="site_libs/leaflet-markercluster-1.0.5/MarkerCluster.Default.css" rel="stylesheet" />
+<script src="site_libs/leaflet-markercluster-1.0.5/leaflet.markercluster.js"></script>
+<script src="site_libs/leaflet-markercluster-1.0.5/leaflet.markercluster.freezable.js"></script>
+<script src="site_libs/leaflet-markercluster-1.0.5/leaflet.markercluster.layersupport.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+
+</div>
+
+
+<p><br />
+</p>
+<p float="left" align="middle">
+<img src="figure/slack_avatar.png" style="width:15%; margin-right: 5px">
+</p>
+<p float="left" align="middle" style="font-size:32px">
+<strong>Just another biologist website</strong>
+</p>
+<hr />
+<p>Hello! My name is Florent (Flo is fine), I’m a graduate researcher at University Laval (Quebec, Canada) interested in several aspects related to the ecology of ungulates. I just finished my MSc project studying the drivers of vigilance in mountain goats and how it relates to their fitness. I have also worked on intrinsic and extrinsics determinants of molt timing in mountain goats before (see <a href="https://www.researchgate.net/publication/331131245_Individual_condition_and_access_to_food_resources_modulate_end_of_molt_in_a_mountain_ungulate" target="_blank">visual abstract <i class="fa fa-external-link" style="font-size:13px"></i></a> or manuscript (<a href="#published-papers">see publications below</a> <i class="fa-hand-o-down" style="font-size:13px"></i>).</p>
+<p>My original motivation for research came from undergraduate project investigating the spatial behavior of caribou in relation to backcountry skiers in the Atlantic-Gaspésie mountain-dwelling caribou population, in eastern Canada.</p>
+<p><br />
+</p>
+<p float="left" align="middle">
+<img src="figure/caribou.JPG" alt="caribou" style="width:2in;"/> <img src="figure/404.JPG" alt="404" style="width:2in;"/> <img src="figure/deer.JPG" alt="capture" style="width:2in;"/>
+</p>
+<p><br />
+</p>
+<div id="published-papers" class="section level1">
+<h1>Published papers</h1>
+<p>E-mail me if a paywall is bothering you (see <a href="##contact">“Contact”</a> section <i class="fa-hand-o-down" style="font-size:13px"></i>)!</p>
+<ul>
+<li><strong>Déry, F.</strong>, Hamel, S., &amp; Côté, S. D. (2019). Getting ready for the winter: Timing and determinants of molt in an alpine ungulate. <em>Ecology and Evolution</em>, <strong>9</strong>, 2920–2932. doi: <a href="https://doi.org/10.1002/ece3.4970" target="_blank">10.1002/ece3.4970</a> <i class="fa fa-unlock" aria-hidden="true" style="font-size:13px"></i></li>
+<li>Lesmerises, F., <strong>Déry, F.</strong>, Johnson, C. J., &amp; St-Laurent, M.-H. (2018). Spatiotemporal response of mountain caribou to the intensity of backcountry skiing. <em>Biological Conservation</em>, <strong>217</strong>, 149–156. doi: <a href="https://doi.org/10.1016/j.biocon.2017.10.030" target="_blank">10.1016/j.biocon.2017.10.030</a> <i class="fa fa-lock" style="font-size:13px"></i></li>
+</ul>
+<p><br />
+</p>
+</div>
+<div id="workplaces" class="section level1">
+<h1>Workplaces</h1>
+<div id="htmlwidget-49231d61541b7d292b4b" style="width:100%;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-49231d61541b7d292b4b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Stamen.Toner",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[54.063036,49.83143,47.740993,69.648977,48.448891,47.367826,45.959225,49.001124,46.77994],[-119.382801,-64.340059,-68.799932,18.955192,-68.52403,-70.040363,-66.640351,-66.012424,-71.276514],8,null,null,{"interactive":true,"className":"","stroke":true,"color":"orange","weight":5,"opacity":0.5,"fill":true,"fillColor":"orange","fillOpacity":0.5},{"showCoverageOnHover":true,"zoomToBoundsOnClick":true,"spiderfyOnMaxZoom":true,"removeOutsideVisibleBounds":true,"spiderLegPolylineOptions":{"weight":1.5,"color":"#222","opacity":0.5},"freezeAtZoom":false},null,["Region :  Caw Ridge <br> Fieldwork <br> Behavioral observations of mountain goats, remote area, captures of mountain goats and hoary marmots <br>","Region :  Anticosti Island <br> Fieldwork <br> Recorded morphometric measurements on harvested white-tailed deer <br>","Region :  Lake-Temiscouata National Park <br> Fieldwork <br> Intensive sampling of white-tailed deer habitat all over the park (80 stations) <br>","Region :  Tromsø, Norway <br> Conference <br> Gave seminar and attended Citizen Science workshop led by  <br>","Region :  Rimouski <br> Studies <br> Bachelor in biology, concentration in wildlife management and habitats <br>","Region :  La Pocatière <br> Studies <br> Wildlife techniques in bioecology <br>","Region :  Fredericton <br> Conference <br> Canadian society of ecology and evolution, August 2019 <br>","Region :  Gaspésie National Park <br> Fieldwork <br> Behavioral observations of caribou, sampling of caribou habitat <br>","Region :  Quebec <br> Studies <br> Master in biology <br>"],null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[45.959225,69.648977],"lng":[-119.382801,18.955192]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      //map.on('click', function (e) {\n      //  var txt = document.querySelector('.lnlt').textContent;\n      //  console.log(txt);\n      //  //txt.innerText.focus();\n      //  //txt.select();\n      //  setClipboardText(txt);\n      //});\n\n      function setClipboardText(text){\n      var id = 'mycustom-clipboard-textarea-hidden-id';\n      var existsTextarea = document.getElementById(id);\n\n      if(!existsTextarea){\n      console.log('Creating textarea');\n      var textarea = document.createElement('textarea');\n      textarea.id = id;\n      // Place in top-left corner of screen regardless of scroll position.\n      textarea.style.position = 'fixed';\n      textarea.style.top = 0;\n      textarea.style.left = 0;\n\n      // Ensure it has a small width and height. Setting to 1px / 1em\n      // doesn't work as this gives a negative w/h on some browsers.\n      textarea.style.width = '1px';\n      textarea.style.height = '1px';\n\n      // We don't need padding, reducing the size if it does flash render.\n      textarea.style.padding = 0;\n\n      // Clean up any borders.\n      textarea.style.border = 'none';\n      textarea.style.outline = 'none';\n      textarea.style.boxShadow = 'none';\n\n      // Avoid flash of white box if rendered for any reason.\n      textarea.style.background = 'transparent';\n      document.querySelector('body').appendChild(textarea);\n      console.log('The textarea now exists :)');\n      existsTextarea = document.getElementById(id);\n      }else{\n      console.log('The textarea already exists :3')\n      }\n\n      existsTextarea.value = text;\n      existsTextarea.select();\n\n      try {\n      var status = document.execCommand('copy');\n      if(!status){\n      console.error('Cannot copy text');\n      }else{\n      console.log('The text is now on the clipboard');\n      }\n      } catch (err) {\n      console.log('Unable to copy.');\n      }\n      }\n\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<p style="font-size:16px">
+<em>Interactive map of places I’ve been during my career so far. Click on a location for more information.</em>
+</p>
+<p><br />
+</p>
+</div>
+<div id="future-plans" class="section level1">
+<h1>Future plans</h1>
+<p>My current and future research focus is to model stress factors in northern ecosystems and use near-term iterative forecasting (hereafter <a href="https://www.pnas.org/content/115/7/1424" target="_blank">NTIF <i class="fa fa-external-link" style="font-size:13px"></i></a>) approach in the context of adaptive management of harvested resources. More precisely, global changes are expected to alter trophic interactions involving consumer-resource and parasite-host relationships in northern ecosystems. Global warming and altered precipitation regime already favor the northern expansion of parasites and cause wide variations in the intensity and frequency of pest insect outbreaks.</p>
+<p>In this context, I will start a PhD in Fall 2020 to obtain predictions from NTIF approach and provide insights on the relative contribution of environmental variability, management decisions and stress factors on trophic interactions and the resilience of two northern ecosystems. I will model the dynamics of winter tick abundance, distribution, and their effects on moose population dynamics in eastern North America.</p>
+<p>I will also investigate the impact of geometrid moths’ outbreaks in subarctic mountain birch forests of Norway. In both systems, climate as a major role in the impact of stress factors. Indeed, cold temperature and snow cover limit winter ticks fall activity, late-winter reproduction and survival, whereas co-occurrence and abundance patterns of two geometrid moth species largely depend on temperature and birch phenology. I plan to combine several variables available at coarse and fine spatial scale and will access data inputs on yearly to daily timescale.</p>
+<p>I am now developing the pilot phase of a collaborative science program that will start this spring 2020, in which we will invite wildlife enthusiasts to submit moose observations and pictures of camera-traps. This program will provide demography and condition data in the moose system at finer spatiotemporal scale. As for the birch and moth system, I will have access to extensive database from the Climate-ecological Observatory for Arctic Tundra (<a href="www.coat.no/en/" target="_blank">COAT <i class="fa fa-external-link" style="font-size:13px"></i></a>). In both systems, several hypotheses and relationships need to be included to accurately predict the effect of stress factors, which is why I consider NTIF the best approach to quantify where and what information must be combined to actual knowledge.</p>
+<p><br />
+</p>
+</div>
+<div id="about-me" class="section level1">
+<h1>About me</h1>
+<p>I speak english and french, and I know around 16 words of italian (excluding the pasta ones). I could be considered as an highly irregular artist, as I sometimes crave drawing and painting in the next minute, ending up using the back of a pizza box, or anything close that will act as a spontaneous medium. I also like screwdrivers, and no I’m not talking about the drink (the actual handtool; although I do like the drink too), especially when they have a wooden handle.</p>
+<p><br />
+</p>
+</div>
+<div id="contact" class="section level1">
+<h1>Contact</h1>
+<p><i class="fa fa-paper-plane-o" style="font-size:25px"></i> <a href="mailto:florent.dery@gmail.com" class="email">florent.dery@gmail.com</a></p>
+<p><i class="glyphicon glyphicon-envelope" style="font-size:25px"></i> Postal address : Département de biologie, U. Laval - 1045 av. de la médecine, Québec (Qc), G1V 0A6</p>
+<p><i class="fab fa-researchgate" style="font-size:36px"></i> <a href="https://www.researchgate.net/profile/Florent_Dery" target="_blank">Research Gate</a></p>
+<p><i class="fab fa-twitter-square" style="font-size:36px"></i> <a href="https://twitter.com/florentdery" target="_blank">Twitter</a></p>
+<p><img src="figure/carrierpigeon.png" style="width:4%; margin-right: 5px" align="left"> Carrier pigeon : Université Laval ; Birdcage #15 - slot #12</p>
+<p float="left" align="middle">
+Feel free to contact me if you’d like to ask questions about my work, shared interests or insights!
+</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
