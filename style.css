@@ -1,0 +1,67 @@
+<<<<<<< HEAD
+/* Whole document: */
+/* Headers */
+h1 { /* Header 1 */
+  font-size: 32px;
+  font-weight: bolder;
+}
+h2 { /* Header 2 */
+    font-size: 26px;
+    font-weight: bolder;
+}
+h3 { /* Header 3 */
+  font-size: 20px;
+  font-style: oblique;
+  font-weight: bold;
+}
+h4,h5,h6{
+  font-size: 16pt;
+  font-style: italic; 
+}
+body{
+  font-family: Helvetica;
+  font-size: 14pt;
+  text-align: justify;
+  margin:auto;
+}
+
+figure {
+  text-indent: 0;
+  text-align: center;
+  font-size: smaller;
+  font-style: italic;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+=======
+/* Whole document: */
+/* Headers */
+h1,h2,h3,h4,h5,h6{
+  font-size: 24pt;
+}
+body{
+  font-family: Helvetica;
+  font-size: 14pt;
+  text-align: justify;
+  margin:auto;
+}
+figure {
+  float: right;
+  width: 30%;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+.imgr {
+  float: right;
+}
+.imgl {
+  float: left;
+}
+>>>>>>> c46fea15e720f2464a74f00d62d063036d006c67

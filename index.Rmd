@@ -1,0 +1,168 @@
+<<<<<<< HEAD
+---
+pagetitle: "Florent Déry"
+output: 
+  html_document:
+    toc: TRUE
+    toc_depth: 1  
+    toc_float:
+      collapsed: TRUE
+css: style.css
+---
+
+```{r setup, include=FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+\
+
+<p float="left" align="middle">
+<img src="figure/slack_avatar.png" style="width:15%; margin-right: 5px">
+</p>
+
+
+<p float="left" align="middle" style="font-size:32px">**Just another biologist website**</p>
+
+___
+
+Hello! My name is Florent (Flo is fine), I'm a graduate researcher at University Laval (Quebec, Canada) interested in several aspects related to the ecology of ungulates. I just finished my MSc project studying the drivers of vigilance in mountain goats and how it relates to their fitness. I have also worked on intrinsic and extrinsics determinants of molt timing in mountain goats before (see [visual abstract <i class="fa fa-external-link" style="font-size:13px"></i>](https://www.researchgate.net/publication/331131245_Individual_condition_and_access_to_food_resources_modulate_end_of_molt_in_a_mountain_ungulate){target="_blank"} or manuscript ([see publications below](#published-papers) <i class="fa-hand-o-down" style="font-size:13px"></i>). 
+
+My original motivation for research came from undergraduate project investigating the spatial behavior of caribou in relation to backcountry skiers in the Atlantic-Gaspésie mountain-dwelling caribou population, in eastern Canada. 
+
+\
+
+<p float="left" align="middle">
+  <img src="figure/caribou.jpg" alt="caribou" style="width:2in;"/>
+  <img src="figure/404.jpg" alt="404" style="width:2in;"/> 
+  <img src="figure/deer.jpg" alt="capture" style="width:2in;"/> 
+</p>
+
+\
+
+# Published papers
+
+E-mail me if a paywall is bothering you (see [ "Contact"](##contact) section <i class="fa-hand-o-down" style="font-size:13px"></i>)! 
+
+- **Déry, F.**, Hamel, S., & Côté, S. D. (2019). Getting ready for the winter: Timing and determinants of molt in an alpine ungulate. *Ecology and Evolution*, **9**, 2920–2932. doi: [10.1002/ece3.4970](https://doi.org/10.1002/ece3.4970){target="_blank"} <i class="fa fa-unlock" aria-hidden="true" style="font-size:13px"></i>
+- Lesmerises, F., **Déry, F.**, Johnson, C. J., & St-Laurent, M.-H. (2018). Spatiotemporal response of mountain caribou to the intensity of backcountry skiing. *Biological Conservation*, **217**, 149–156. doi: [10.1016/j.biocon.2017.10.030](https://doi.org/10.1016/j.biocon.2017.10.030){target="_blank"} <i class="fa fa-lock" style="font-size:13px"></i>
+
+\
+
+# Workplaces
+
+```{r map_capture, echo=FALSE, message=FALSE, warning=FALSE}
+require(tidyverse); require(sf); require(knitr); require(leaflet)
+
+areas=read.csv("areas.csv", header=TRUE, dec=".", sep=";")
+
+areas_sf =areas %>%
+  st_as_sf(coords = c("long", "lat"), crs = 4326)
+
+
+
+leaflet(areas,width = "100%") %>% 
+  addProviderTiles(providers$Stamen.Toner) %>% 
+  addCircleMarkers(
+    clusterOptions = markerClusterOptions(),
+    radius = 8,
+    color = "orange",
+    stroke = TRUE,
+    fillOpacity = .5,
+    popup= paste("Region : ", areas$Area,"<br>",
+                 areas$Type, "<br>",
+                 areas$Description, "<br>")
+  ) %>% 
+    leafem::addMouseCoordinates()
+
+
+```
+<p style="font-size:16px" > *Interactive map of places I've been during my career so far. Click on a location for more information.* </p> 
+
+# Future plans
+
+My current and future research focus is to model stress factors in northern ecosystems and use near-term iterative forecasting (hereafter [NTIF <i class="fa fa-external-link" style="font-size:13px"></i>](https://www.pnas.org/content/115/7/1424){target="_blank"}) approach in the context of adaptive management of harvested resources. More precisely, global changes are expected to alter trophic interactions involving consumer-resource and parasite-host relationships in northern ecosystems. Global warming and altered precipitation regime already favor the northern expansion of parasites and cause wide variations in the intensity and frequency of pest insect outbreaks. 
+
+In this context, I will start a PhD in Fall 2020 to obtain predictions from NTIF approach and provide insights on the relative contribution of environmental variability, management decisions and stress factors on trophic interactions and the resilience of two northern ecosystems. I will model the dynamics of winter tick abundance, distribution, and their effects on moose population dynamics in eastern North America. 
+
+I will also investigate the impact of geometrid moths’ outbreaks in subarctic mountain birch forests of Norway. In both systems, climate as a major role in the impact of stress factors. Indeed, cold temperature and snow cover limit winter ticks fall activity, late-winter reproduction and survival, whereas co-occurrence and abundance patterns of two geometrid moth species largely depend on temperature and birch phenology. I plan to combine several variables available at coarse and fine spatial scale and will access data inputs on yearly to daily timescale. 
+
+I am now developing the pilot phase of a collaborative science program that will start this spring 2020, in which we will invite wildlife enthusiasts to submit moose observations and pictures of camera-traps. This program will provide demography and condition data in the moose system at finer spatiotemporal scale. As for the birch and moth system, I will have access to extensive database from the Climate-ecological Observatory for Arctic Tundra ([COAT <i class="fa fa-external-link" style="font-size:13px"></i>](www.coat.no/en/){target="_blank"}). In both systems, several hypotheses and relationships need to be included to accurately predict the effect of stress factors, which is why I consider NTIF the best approach to quantify where and what information must be combined to actual knowledge. 
+
+\
+
+# About me
+
+I speak english and french, and I know around 16 words of italian (excluding the pasta ones). I could be considered as an highly irregular artist, as I sometimes crave drawing and painting in the next minute, ending up using the back of a pizza box, or anything close that will act as a spontaneous medium. I also like screwdrivers, and no I'm not talking about the drink (the actual handtool; although I do like the drink too), especially when they have a wooden handle. 
+
+\
+
+# Contact
+
+<i class="fa fa-paper-plane-o" style="font-size:25px"></i> florent.dery@gmail.com
+
+<i class="glyphicon glyphicon-envelope" style="font-size:25px"></i> Postal address : Département de biologie, U. Laval - 1045 av. de la médecine, Québec (Qc), G1V 0A6
+
+<i class="fab fa-researchgate" style="font-size:36px"></i> [Research Gate](https://www.researchgate.net/profile/Florent_Dery){target="_blank"}   
+
+<i class="fab fa-twitter-square" style="font-size:36px"></i> [Twitter](https://twitter.com/florentdery){target="_blank"}
+
+<img src="figure/carrierpigeon.png" style="width:4%; margin-right: 5px" align="left"> Carrier pigeon : Université Laval ; Birdcage #15 - slot #12
+
+
+<p float="left" align="middle"> Feel free to contact me if you'd like to ask questions about my work, shared interests or insights! </p>
+
+
+=======
+---
+title: "Just another biologist website"
+author: ""
+output: html_document
+css: style.css
+---
+
+\hspace
+
+
+___
+
+<figure>
+  <p><img src="figure/404.jpg"
+    width="256" height="192"
+    alt="404">
+  <figcaption>A fabulous mountain goat showing
+   off in the wind, summer 2016
+   Caw Ridge, near Grande Cache, AB, Canada</figcaption>
+</figure> 
+
+\hspace
+
+Hello! My name is Florent and I am currently at the last steps of a MSc project studying the drivers of vigilance in mountain goats and how it relates to their fitness. I have also worked on intrinsic and extrinsics determinants of molt timing in mountain goats before (see [visual abstract](https://www.researchgate.net/publication/331131245_Individual_condition_and_access_to_food_resources_modulate_end_of_molt_in_a_mountain_ungulate) or [publication](https://doi.org/10.1002/ece3.4970)). 
+
+\hspace
+
+My original motivation for research came from undergraduate project investigating the spatial behavior of caribou in relation to backcountry skiers (available [here](https://doi.org/10.1016/j.biocon.2017.10.030)) in Eastern Canada (Atlantic-Gaspésie mountain-dwelling caribou population). 
+
+\hspace
+
+
+## Future plans
+
+My current and future research focus is to model stress factors in northern ecosystems and use near-term iterative forecasting (hereafter [NTIF](https://www.pnas.org/content/115/7/1424)) approach in the context of adaptive management of harvested resources. More precisely, global changes are expected to alter trophic interactions involving consumer-resource and parasite-host relationships in northern ecosystems. Global warming and altered precipitation regime already favor the northern expansion of parasites and cause wide variations in the intensity and frequency of pest insect outbreaks. 
+
+<figure>
+<p><img src="figure/caribou.jpg" 
+    width="256" height="192"
+    alt= "caribou">
+  <figcaption>A female caribou in summer 2014 wandering on Mont Jacques-Cartier; Gaspesie National Park, Qc, Canada </figcaption>
+</figure> 
+
+In this context, I will start a PhD in Spring 2020 to obtain predictions from NTIF approach and provide insights on the relative contribution of environmental variability, management decisions and stress factors on trophic interactions and the resilience of two northern ecosystems. I will model the dynamics of winter tick abundance, distribution, and their effects on moose population dynamics in eastern North America. 
+
+I will also investigate the impact of geometrid moths’ outbreaks in subarctic mountain birch forests of Norway. In both systems, climate as a major role in the impact of stress factors. Indeed, cold temperature and snow cover limit winter ticks fall activity, late-winter reproduction and survival, whereas co-occurrence and abundance patterns of two geometrid moth species largely depend on temperature and birch phenology. I plan to combine several variables available at coarse and fine spatial scale and will access data inputs on yearly to daily timescale. I am now developing the pilot phase of a collaborative science program that will start this spring 2020, in which we will invite wildlife enthusiasts to submit moose observations and pictures of camera-traps. This program will provide demography and condition data in the moose system at finer spatiotemporal scale. As for the birch and moth system, I will have access to extensive database from the Climate-ecological Observatory for Arctic Tundra ([COAT](www.coat.no/en/)). In both systems, several hypotheses and relationships need to be included to accurately predict the effect of stress factors, which is why I consider NTIF the best approach to quantify where and what information must be combined to actual knowledge. 
+
+
+
+More precisely, my work will be a part of a big project to invest how climate will shape the effect of winter ticks on moose population 
+
+## (in construction)
+>>>>>>> c46fea15e720f2464a74f00d62d063036d006c67
