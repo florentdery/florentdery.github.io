@@ -11,17 +11,14 @@
 
 
 
-<title>Florent Déry</title>
+<title>F. Déry</title>
 
 <script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -120,6 +117,93 @@ summary {
 </style>
 
 
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
 
 <!-- tabsets -->
 
@@ -182,69 +266,6 @@ summary {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -254,17 +275,42 @@ div.tocify {
 <div class="container-fluid main-container">
 
 
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
-<div class="col-xs-12 col-sm-4 col-md-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
-
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">F. Déry</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="#papers">Papers</a>
+</li>
+<li>
+  <a href="#workplaces">Workplaces</a>
+</li>
+<li>
+  <a href="#future">Future</a>
+</li>
+<li>
+  <a href="#about">About</a>
+</li>
+<li>
+  <a href="#contact">Contact</a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
 
 <div class="fluid-row" id="header">
 
@@ -276,25 +322,36 @@ div.tocify {
 
 <p><br />
 </p>
-<p float="left" align="middle">
-<img src="figure/avatar.jpg" style="width:15%; margin-right: 5px">
+<div class="container">
+<img src="images/home_image.png" alt="look_sky" style="width:100%; height:auto; max-width:100%"/>
+<div class="top-left">
+<div class="tagline">
+<p>
+<strong>Just another<br>biologist website</strong>
 </p>
-<p float="left" align="middle" style="font-size:32px">
-<strong>Just another biologist website</strong>
+</div>
+</div>
+</div>
+<p><br />
 </p>
 <hr />
-<p>Hello! My name is Florent (Flo is fine), I’m a graduate researcher at University Laval, Quebec, Canada interested in several aspects related to the ecology of ungulates. I just finished my MSc project studying the drivers of vigilance in mountain goats and how it relates to their fitness. I ’ve also worked on intrinsic and extrinsics determinants of molt timing in mountain goats before (see <a href="https://www.researchgate.net/publication/331131245_Individual_condition_and_access_to_food_resources_modulate_end_of_molt_in_a_mountain_ungulate" target="_blank">visual abstract <i class="fa fa-external-link" style="font-size:13px"></i></a> or manuscript <a href="#published-papers">see publications below</a> <i class="fa-hand-o-down" style="font-size:13px"></i>).</p>
+<p><img src="images/avatar.jpg" style="width:15%; min-width:1in; margin: 0.5em;" align="left"> Hello! My name is Florent (Flo is fine), I’m a graduate researcher at University Laval, Quebec, Canada interested in several aspects related to the ecology of ungulates. I just finished my MSc project studying the drivers of vigilance in mountain goats and how it relates to their fitness. I’ve also worked on intrinsic and extrinsics determinants of molt timing in mountain goats before (see <a href="https://www.researchgate.net/publication/331131245_Individual_condition_and_access_to_food_resources_modulate_end_of_molt_in_a_mountain_ungulate" target="_blank">visual abstract <i class="fa fa-external-link" style="font-size:13px"></i></a> or manuscript (<a href="#papers">see “Papers” section <i class="fa fa-hand-o-down" style="font-size:13px"> </i></a>).</p>
 <p>My original motivation for research came from undergraduate project investigating the spatial behavior of caribou in relation to backcountry skiers in the Atlantic-Gaspésie mountain-dwelling caribou population, in eastern Canada.</p>
 <p><br />
 </p>
 <p float="left" align="middle">
-<img src="figure/caribou.JPG" alt="caribou" style="width:2in;"/> <img src="figure/404.JPG" alt="404" style="width:2in;"/> <img src="figure/deer.JPG" alt="capture" style="width:2in;"/>
+<figure style="width:100%;">
+<img src="images/caribou.JPG" alt="caribou" style="width:32%;"/> <img src="images/404.JPG" alt="404" style="width:32%;"/> <img src="images/deer.JPG" alt="deer" style="width:32%;"/>
+<figcaption>
+A female caribou, a female mountain goat and a female white-tailed deer
+</figcaption>
+</figure>
 </p>
 <p><br />
 </p>
-<div id="published-papers" class="section level1">
-<h1>Published papers</h1>
-<p>E-mail me if a paywall is bothering you (see <a href="##contact">“Contact”</a> section <i class="fa-hand-o-down" style="font-size:13px"></i>)!</p>
+<div id="papers" class="section level1">
+<h1>Papers</h1>
+<p>E-mail me if a paywall is bothering you (<a href="#contact">see “Contact” section <i class="fa fa-hand-o-down" style="font-size:13px"> </i></a> <i class="fa-hand-o-down" style="font-size:13px"></i>)!</p>
 <ul>
 <li><strong>Déry, F.</strong>, Hamel, S., &amp; Côté, S. D. (2019). Getting ready for the winter: Timing and determinants of molt in an alpine ungulate. <em>Ecology and Evolution</em>, <strong>9</strong>, 2920–2932. doi: <a href="https://doi.org/10.1002/ece3.4970" target="_blank">10.1002/ece3.4970</a> <i class="fa fa-unlock" aria-hidden="true" style="font-size:13px"></i></li>
 <li>Lesmerises, F., <strong>Déry, F.</strong>, Johnson, C. J., &amp; St-Laurent, M.-H. (2018). Spatiotemporal response of mountain caribou to the intensity of backcountry skiing. <em>Biological Conservation</em>, <strong>217</strong>, 149–156. doi: <a href="https://doi.org/10.1016/j.biocon.2017.10.030" target="_blank">10.1016/j.biocon.2017.10.030</a> <i class="fa fa-lock" style="font-size:13px"></i></li>
@@ -312,18 +369,48 @@ div.tocify {
 <p><br />
 </p>
 </div>
-<div id="future-plans" class="section level1">
-<h1>Future plans</h1>
-<p>My current and future research focus is to model stress factors in northern ecosystems and use near-term iterative forecasting (hereafter <a href="https://www.pnas.org/content/115/7/1424" target="_blank">NTIF <i class="fa fa-external-link" style="font-size:13px"></i></a>) approach in the context of adaptive management of harvested resources. More precisely, global changes are expected to alter trophic interactions involving consumer-resource and parasite-host relationships in northern ecosystems. Global warming and altered precipitation regime already favor the northern expansion of parasites and cause wide variations in the intensity and frequency of pest insect outbreaks.</p>
-<p>In this context, I will start a PhD in Fall 2020 to obtain predictions from NTIF approach and provide insights on the relative contribution of environmental variability, management decisions and stress factors on trophic interactions and the resilience of two northern ecosystems. I will model the dynamics of winter tick abundance, distribution, and their effects on moose population dynamics in eastern North America.</p>
-<p>I will also investigate the impact of geometrid moths’ outbreaks in subarctic mountain birch forests of Norway. In both systems, climate as a major role in the impact of stress factors. Indeed, cold temperature and snow cover limit winter ticks fall activity, late-winter reproduction and survival, whereas co-occurrence and abundance patterns of two geometrid moth species largely depend on temperature and birch phenology. I plan to combine several variables available at coarse and fine spatial scale and will access data inputs on yearly to daily timescale.</p>
-<p>I am now developing the pilot phase of a collaborative science program that will start this spring 2020, in which we will invite wildlife enthusiasts to submit moose observations and pictures of camera-traps. This program will provide demography and condition data in the moose system at finer spatiotemporal scale. As for the birch and moth system, I will have access to extensive database from the Climate-ecological Observatory for Arctic Tundra (<a href="www.coat.no/en/" target="_blank">COAT <i class="fa fa-external-link" style="font-size:13px"></i></a>). In both systems, several hypotheses and relationships need to be included to accurately predict the effect of stress factors, which is why I consider NTIF the best approach to quantify where and what information must be combined to actual knowledge.</p>
+<div id="future" class="section level1">
+<h1>Future</h1>
+<p>My future research focus is to model stress factors in northern ecosystems by using near-term iterative forecasting (hereafter <a href="https://www.pnas.org/content/115/7/1424" target="_blank">NTIF <i class="fa fa-external-link" style="font-size:13px"></i></a>) approach in the context of adaptive management of harvested resources.</p>
+<p>More precisely, global changes are expected to alter trophic interactions involving consumer-resource and parasite-host relationships in northern ecosystems. Global warming and altered precipitation regime already favor the northern expansion of parasites and cause wide variations in the intensity and frequency of pest insect outbreaks.</p>
+<figure style="width:20%; float:right;">
+<p>
+<img src="images/book.jpg" style="width:20%; min-width:1in" alt="book">
+<figcaption>
+<a href="https://press.princeton.edu/books/hardcover/9780691160573/ecological-forecasting" target="_blank">Dietze, M. C. (2017).<br><em>Ecological Forecasting</em>.<i class="fa fa-external-link" style="font-size:13px"></i></a>
+</figcaption>
+</figure>
+<p>In this context, I will start a PhD in Fall 2020 to obtain predictions from NTIF approach and provide insights on the relative contribution of environmental variability, management decisions and stress factors on trophic interactions and the resilience of two northern ecosystems. 1) I will model the dynamics of winter tick abundance, distribution, and their effects on moose population dynamics in eastern North America. 2) I will also investigate the impact of geometrid moths’ outbreaks in subarctic mountain birch forests of Norway.</p>
+<p>In both systems, several hypotheses and relationships need to be included to accurately predict the effect of stress factors, which is why I consider NTIF the best approach to quantify where and what information must be combined to actual knowledge.</p>
+<figure style="width:20%; float:left;">
+<p>
+<img src="images/moth.jpg" style="width:30%; min-width:1.1in" alt=" moth">
+<figcaption>
+Autumnal moth<br>larvae; <a href="https://partner.sciencenorway.no/forest-forskningno-insects/moth-invasions-cause-damage-in-the-sub-arctic-birch-forest/1404722">credit <i class="fa fa-external-link" style="font-size:13px"></i></a>
+</figcaption>
+</figure>
+<div id="climate-as-a-common-driver-in-both-systems" class="section level3">
+<h3>Climate as a common driver in both systems</h3>
+<p>In both systems, climate as a major role in the impact of stress factors. Indeed, cold temperature and snow cover limit winter ticks fall activity, late-winter reproduction and survival, whereas co-occurrence and abundance patterns of two geometrid moth species largely depend on temperature and birch phenology. I plan to combine several variables available at coarse and fine spatial scale and will access data inputs on yearly to daily timescale.</p>
+</div>
+<div id="collaborative-science-and-research-partners" class="section level3">
+<h3>Collaborative science and research partners</h3>
+<p>I am now developing the pilot phase of a collaborative science program that will start this spring 2020, in which we will invite wildlife enthusiasts to submit moose observations and pictures of camera-traps. This program will provide demography and condition data in the moose system at finer spatiotemporal scale. As for the birch and moth system, I will have access to extensive database from the Climate-ecological Observatory for Arctic Tundra (<a href="www.coat.no/en/" target="_blank">COAT <i class="fa fa-external-link" style="font-size:13px"></i></a>).</p>
 <p><br />
 </p>
 </div>
-<div id="about-me" class="section level1">
-<h1>About me</h1>
-<p>I speak english and french, and I know around 16 words of italian (excluding the pasta ones). I could be considered as an highly irregular artist, as I sometimes crave drawing and painting in the next minute, ending up using the back of a pizza box, or anything close that will act as a spontaneous medium. I also like screwdrivers, and no I’m not talking about the drink (the actual handtool; although I do like the drink too), especially when they have a wooden handle.</p>
+</div>
+<div id="about" class="section level1">
+<h1>About</h1>
+<figure style="width:30%; float:right;">
+<p>
+<img src="images/arting.jpg" style="width:40%; min-width:2in" alt="arting">
+<figcaption>
+An attempt at<br>“arting” on a<br>pizza box
+</figcaption>
+</figure>
+<p>I speak english and french, and I know around 16 words of italian (excluding the pasta ones). I could be considered as an highly irregular artist, as I sometimes crave drawing and painting in the next minute, ending up using the back of a pizza box, or anything close that will act as a spontaneous medium. I like blues, jazz root, some folk, and other music as well. I play some guitar (always the same blues rhythm over and over again), but I’m better with a harmonica.</p>
+<p>I also like screwdrivers, and no I’m not talking about the drink (the actual handtool; although I do like the drink too), especially when they have a wooden handle.</p>
 <p><br />
 </p>
 </div>
@@ -333,16 +420,16 @@ div.tocify {
 <p><i class="glyphicon glyphicon-envelope" style="font-size:25px"></i> Postal address : Département de biologie, U. Laval - 1045 av. de la médecine, Québec (Qc), G1V 0A6</p>
 <p><i class="fab fa-researchgate" style="font-size:36px"></i> <a href="https://www.researchgate.net/profile/Florent_Dery" target="_blank">Research Gate</a></p>
 <p><i class="fab fa-twitter-square" style="font-size:36px"></i> <a href="https://twitter.com/florentdery" target="_blank">Twitter</a></p>
-<p><img src="figure/carrierpigeon.png" style="width:4%; margin-right: 5px" align="left"> Carrier pigeon : Université Laval ; Birdcage #15 - slot #12</p>
+<p><img src="images/carrierpigeon.png" style="width:4%; margin-right: 5px" align="left"> Carrier pigeon : Université Laval ; Birdcage #15 - slot #12</p>
+<br />
+
 <p float="left" align="middle">
-Feel free to contact me if you’d like to ask questions about my work, shared interests or insights!
+<em>Feel free to contact me if you’d like to ask questions about my work, shared interests or insights!</em>
 </p>
 </div>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -375,32 +462,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
