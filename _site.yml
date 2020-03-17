@@ -2,9 +2,24 @@ title: Florent Déry
 name: "florent_website"
 output_dir: "."
 
+navbar:
+  title: "F. Déry"
+  type: inverse
+  right:
+    - text: "Papers"
+      href: "#papers"
+    - text: "Workplaces"
+      href: "#workplaces"
+    - text: "Future"
+      href: "#future"
+    - text: "About"
+      href: "#about"
+    - text: "Contact"
+      href: "#contact"
+
 output:
   html_document:
-    theme: readable
+    theme: cosmo
     css: style.css
 
 #Visual theme ("default", "cerulean", "journal", "flatly"(looks like researchgate), 
