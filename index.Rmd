@@ -42,7 +42,11 @@ My original motivation for research came from undergraduate project investigatin
 
 # Papers
 
+<<<<<<< HEAD
 E-mail me if a paywall is bothering you ([see "Contact" section<i class="fa fa-hand-o-down" style="font-size:13px"> </i>](#contact) <i class="fa-hand-o-down" style="font-size:13px"></i>)! 
+=======
+E-mail me if a paywall is bothering you ([see "Contact" section <i class="fa fa-hand-o-down" style="font-size:13px"> </i>](#contact) <i class="fa-hand-o-down" style="font-size:13px"></i>)! 
+>>>>>>> 0aca3984a7f2f1c767fa02fb3070db0dc3bd5001
 
 - **Déry, F.**, Hamel, S., & Côté, S. D. (2019). Getting ready for the winter: Timing and determinants of molt in an alpine ungulate. *Ecology and Evolution*, **9**, 2920–2932. doi: [10.1002/ece3.4970](https://doi.org/10.1002/ece3.4970){target="_blank"} <i class="fa fa-unlock" aria-hidden="true" style="font-size:13px"></i>
 - Lesmerises, F., **Déry, F.**, Johnson, C. J., & St-Laurent, M.-H. (2018). Spatiotemporal response of mountain caribou to the intensity of backcountry skiing. *Biological Conservation*, **217**, 149–156. doi: [10.1016/j.biocon.2017.10.030](https://doi.org/10.1016/j.biocon.2017.10.030){target="_blank"} <i class="fa fa-lock" style="font-size:13px"></i>
@@ -91,11 +95,16 @@ More precisely, global changes are expected to alter trophic interactions involv
   <p> <img src="images/book.jpg" style="width:20%; min-width:1in" alt="book">
   <figcaption>[Dietze, M. C. (2017).<br>*Ecological Forecasting*.<i class="fa fa-external-link" style="font-size:13px"></i>](https://press.princeton.edu/books/hardcover/9780691160573/ecological-forecasting){target="_blank"} </figcaption>
 </figure>
+<<<<<<< HEAD
 
 In this context, I will start a PhD during fall 2020 to obtain predictions from NTIF approach and provide insights on the relative contribution of environmental variability, management decisions and stress factors on trophic interactions and the resilience of two northern ecosystems:
 
 1. I will model the dynamics of winter tick abundance, distribution, and their effects on moose population dynamics in eastern North America. 
 2. I will also investigate the impact of geometrid moths’ outbreaks in subarctic mountain birch forests of Norway. 
+=======
+
+In this context, I will start a PhD in Fall 2020 to obtain predictions from NTIF approach and provide insights on the relative contribution of environmental variability, management decisions and stress factors on trophic interactions and the resilience of two northern ecosystems. 1) I will model the dynamics of winter tick abundance, distribution, and their effects on moose population dynamics in eastern North America. 2) I will also investigate the impact of geometrid moths’ outbreaks in subarctic mountain birch forests of Norway. 
+>>>>>>> 0aca3984a7f2f1c767fa02fb3070db0dc3bd5001
 
 In both systems, several hypotheses and relationships need to be included to accurately predict the effect of stress factors, which is why I consider NTIF the best approach to quantify where and what information must be combined to actual knowledge. 
 
