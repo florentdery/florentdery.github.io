@@ -13,9 +13,6 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 
  <div class="container">
   <img src="images/home_image.png" alt="look_sky" style="width:100%; height:auto; max-width:100%"/>
-  <div class="top-left">
-  <div class="tagline" > <p>**Just another<br>biologist website**</p> </div>
-  </div>
 </div> 
 
 \
@@ -23,7 +20,7 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 ___
 
 <img src="images/avatar.jpg" style="width:15%; min-width:1in; margin: 0.5em;" align="left">
-Hello! My name is Florent (Flo is fine), I'm a graduate researcher at University Laval, Quebec, Canada interested in several aspects related to the ecology of ungulates. I just finished my MSc project studying the drivers of vigilance in mountain goats and how it relates to their fitness. I've also worked on intrinsic and extrinsics determinants of molt timing in mountain goats before (see [visual abstract <i class="fa fa-external-link" style="font-size:13px"></i>](https://www.researchgate.net/publication/331131245_Individual_condition_and_access_to_food_resources_modulate_end_of_molt_in_a_mountain_ungulate){target="_blank"} or manuscript ([see "Papers" section <i class="fa fa-hand-o-down" style="font-size:13px"> </i>](#papers)). 
+Hello! My name is Florent (Flo is fine), I'm a graduate researcher at University Laval, Quebec, Canada interested in several aspects related to the ecology of ungulates. My MSc project focused on studying the drivers of vigilance in mountain goats and how it relates to their fitness. I've also worked on intrinsic and extrinsics determinants of molt timing in mountain goats before (see [visual abstract <i class="fa fa-external-link" style="font-size:13px"></i>](https://www.researchgate.net/publication/331131245_Individual_condition_and_access_to_food_resources_modulate_end_of_molt_in_a_mountain_ungulate){target="_blank"} or manuscript ([see "Papers" section <i class="fa fa-hand-o-down" style="font-size:13px"> </i>](#papers)). 
 
 My original motivation for research came from undergraduate project investigating the spatial behavior of caribou in relation to backcountry skiers in the Atlantic-Gaspésie mountain-dwelling caribou population, in eastern Canada. 
 
@@ -44,6 +41,7 @@ My original motivation for research came from undergraduate project investigatin
 
 E-mail me if a paywall is bothering you ([see "Contact" section <i class="fa fa-hand-o-down" style="font-size:13px"> </i>](#contact) <i class="fa-hand-o-down" style="font-size:13px"></i>)! 
 
+- **Déry, F.**, Hamel, S., & Côté, S. D. (2020). Linking proximate drivers and fitness returns of vigilance: Offspring from more vigilant mothers survive better. *(submitted)*
 - **Déry, F.**, Hamel, S., & Côté, S. D. (2019). Getting ready for the winter: Timing and determinants of molt in an alpine ungulate. *Ecology and Evolution*, **9**, 2920–2932. doi: [10.1002/ece3.4970](https://doi.org/10.1002/ece3.4970){target="_blank"} <i class="fa fa-unlock" aria-hidden="true" style="font-size:13px"></i>
 - Lesmerises, F., **Déry, F.**, Johnson, C. J., & St-Laurent, M.-H. (2018). Spatiotemporal response of mountain caribou to the intensity of backcountry skiing. *Biological Conservation*, **217**, 149–156. doi: [10.1016/j.biocon.2017.10.030](https://doi.org/10.1016/j.biocon.2017.10.030){target="_blank"} <i class="fa fa-lock" style="font-size:13px"></i>
 
@@ -64,7 +62,7 @@ areas_sf =areas %>%
 leaflet(areas,width = "100%") %>% 
   addProviderTiles(providers$Stamen.Toner) %>% 
   addCircleMarkers(
-    clusterOptions = markerClusterOptions(),
+    clusterOptions = markerClusterOptions(FALSE),
     radius = 8,
     color = "orange",
     stroke = TRUE,
@@ -134,6 +132,8 @@ I also like screwdrivers, and no I'm not talking about the drink (the actual han
 <i class="glyphicon glyphicon-envelope" style="font-size:25px"></i> Postal address : Département de biologie, U. Laval - 1045 av. de la médecine, Québec (Qc), G1V 0A6
 
 <i class="fab fa-researchgate" style="font-size:36px"></i> [Research Gate](https://www.researchgate.net/profile/Florent_Dery){target="_blank"}   
+
+<img src="images/orcid.png" style="width:36px; margin-right: 5px" align="left"> [ORCID](https://orcid.org/0000-0003-1978-838X){target="_blank"} 
 
 <i class="fab fa-twitter-square" style="font-size:36px"></i> [Twitter](https://twitter.com/florentdery){target="_blank"}
 
