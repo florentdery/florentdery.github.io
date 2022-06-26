@@ -17,12 +17,20 @@ htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 
 \
 
+<div style="font-size:10px">
+*Disclaimer: I don't update this website very often. Last update = June 2022* 
+</div> 
+
 ___
 
 <img src="images/avatar.jpg" style="width:15%; min-width:1in; margin: 0.5em;" align="left">
-Hello! My name is Florent (Flo is fine), I'm a graduate researcher at University Laval, Quebec, Canada interested in several aspects related to the ecology of ungulates. My MSc project focused on studying the drivers of vigilance in mountain goats and how it relates to their fitness. I've also worked on intrinsic and extrinsics determinants of molt timing in mountain goats before (see [visual abstract <i class="fa fa-external-link" style="font-size:13px"></i>](https://www.researchgate.net/publication/331131245_Individual_condition_and_access_to_food_resources_modulate_end_of_molt_in_a_mountain_ungulate){target="_blank"} or manuscript ([see "Papers" section <i class="fa fa-hand-o-down" style="font-size:13px"> </i>](#papers)). 
 
-My original motivation for research came from undergraduate project investigating the spatial behavior of caribou in relation to backcountry skiers in the Atlantic-Gaspésie mountain-dwelling caribou population, in eastern Canada. 
+
+Hello! My name is Florent (Flo is fine), I'm a PhD student at University Laval, Québec, Canada interested in several aspects related to the ecology of ungulates. My advisors are [S. Hamel <i class="fa fa-external-link" style="font-size:13px"></i>](https://sites.google.com/site/sandrahamel18/){target="_blank"}, [J.-P. Tremblay <i class="fa fa-external-link" style="font-size:13px"></i>](http://www.cef-cfr.ca/index.php?n=Membres.JeanPierreTremblay){target="_blank"}, and [N.G. Yoccoz <i class="fa fa-external-link" style="font-size:13px"></i>](https://en.uit.no/ansatte/person?p_document_id=41160){target="_blank"}.
+
+My MSc project was focused on studying the drivers of vigilance in mountain goats and how it relates to their fitness. I've also worked on intrinsic and extrinsics determinants of molt timing in mountain goats before (see [visual abstract <i class="fa fa-external-link" style="font-size:13px"></i>](https://www.researchgate.net/publication/331131245_Individual_condition_and_access_to_food_resources_modulate_end_of_molt_in_a_mountain_ungulate){target="_blank"} or manuscript ([see "Papers" section <i class="fa fa-hand-o-down" style="font-size:13px"> </i>](#papers)). 
+
+My original motivation for research came from undergraduate project investigating the spatial behavior of caribou in relation to Randonnée skiers (Backcountry skiers) in the Atlantic-Gaspésie mountain-dwelling caribou population, in eastern Canada. 
 
 \
 
@@ -52,7 +60,7 @@ E-mail me if a paywall is bothering you ([see "Contact" section <i class="fa fa-
 ```{r map_capture, echo=FALSE, message=FALSE, warning=FALSE}
 require(tidyverse); require(sf); require(knitr); require(leaflet)
 
-areas=read.csv("areas.csv", header=TRUE, dec=".", sep=";")
+areas=read.csv("areas.csv", header=TRUE, dec=".", sep=",")
 
 areas_sf =areas %>%
   st_as_sf(coords = c("long", "lat"), crs = 4326)
@@ -81,19 +89,14 @@ leaflet(areas,width = "100%") %>%
 
 # Future
 
-My future research focus is to model stress factors in northern ecosystems by using near-term iterative forecasting (hereafter [NTIF <i class="fa fa-external-link" style="font-size:13px"></i>](https://www.pnas.org/content/115/7/1424){target="_blank"}) approach in the context of adaptive management of harvested resources. 
+My actual PhD research focus is to model stress factors in northern ecosystems by using near-term iterative forecasting (hereafter [NTIF <i class="fa fa-external-link" style="font-size:13px"></i>](https://www.pnas.org/content/115/7/1424){target="_blank"}) approach in the context of adaptive management of harvested resources. 
 
-More precisely, global changes are expected to alter trophic interactions involving consumer-resource and parasite-host relationships in northern ecosystems. Global warming and altered precipitation regime already favor the northern expansion of parasites and cause wide variations in the intensity and frequency of pest insect outbreaks. 
+More precisely, global changes are altering trophic interactions involving consumer-resource and parasite-host relationships in northern ecosystems. Global warming and altered precipitation regime already favour the northern expansion of parasites and cause wide variations in the intensity and frequency of pest insect outbreaks. 
 
-<figure style="width:20%; float:right; min-width:1.1in"">
-  <p> <img src="images/book.jpg" style="width:20%; min-width:1in" alt="book">
-  <figcaption>Dietze, M. C. (2017).<br>*Ecological Forecasting* </figcaption>
-</figure>
-
-In this context, I will start a PhD during fall 2020 to obtain predictions from NTIF approach and provide insights on the relative contribution of environmental variability, management decisions and stress factors on trophic interactions and the resilience of two northern ecosystems:
+In this context, I started a PhD during fall 2020 to obtain predictions from NTIF approach and provide insights on the relative contribution of environmental variability, management decisions and stress factors on trophic interactions and the resilience of two northern ecosystems:
 
 1. I will model the dynamics of winter tick abundance, distribution, and their effects on moose population dynamics in eastern North America. 
-2. I will also investigate the impact of geometrid moths’ outbreaks in subarctic mountain birch forests of Norway. 
+2. I will develop models of egg-hatching dates of geometrid moths in subarctic mountain birch forests of Norway. 
 
 In both systems, several hypotheses and relationships need to be included to accurately predict the effect of stress factors, which is why I consider NTIF the best approach to quantify where and what information must be combined to actual knowledge. 
 
@@ -108,7 +111,7 @@ In both systems, climate as a major role in the impact of stress factors. Indeed
 
 ### Collaborative science and research partners
 
-I am now developing the pilot phase of a collaborative science program that will start this spring 2020, in which we will invite wildlife enthusiasts to submit moose observations and pictures of camera-traps. This program will provide demography and condition data in the moose system at finer spatiotemporal scale. As for the birch and moth system, I will have access to extensive database from the Climate-ecological Observatory for Arctic Tundra ([COAT <i class="fa fa-external-link" style="font-size:13px"></i>](www.coat.no/en/){target="_blank"}). 
+I have lunched a collaborative science program that will in spring 2021, in which we invite hunters and stake holders to submit moose observations and pictures of camera-traps installed on their respective properties or allowed lands. This program will provide crucial information on hair loss, a pathology caused by winter ticks. Moreover, I hope to use this data to feed some demography and condition data in the moose system at a finer spatio-temporal scale. As for the birch and moth system, My aim is to spatially forecast egg-hatching dates, comparing different models, to try to see if (a)synchrony between egg-hatching dates and bud burst is a predictor of outbreaks and or larval densities. For this chapter, I'll build models from data gathered through a systematic review on incubation parameters of these moths. I will have access to extensive database from the Climate-ecological Observatory for Arctic Tundra ([COAT <i class="fa fa-external-link" style="font-size:13px"></i>](www.coat.no/en/){target="_blank"}). 
 
 \
 
@@ -119,9 +122,9 @@ I am now developing the pilot phase of a collaborative science program that will
   <figcaption> An attempt at<br>"arting" on a<br>pizza box </figcaption>
 </figure>
 
-I speak english and french, and I know around 16 words of italian (excluding the pasta ones). I could be considered as an highly irregular artist, as I sometimes crave drawing and painting in the next minute, ending up using the back of a pizza box, or anything close that will act as a spontaneous medium. I like blues, jazz root, some folk, and other music as well. I play some guitar (always the same blues rhythm over and over again), but I'm better with a harmonica. 
+I speak english and french, few mostly outdoor-related norwegian words and I know around 16 words of italian (excluding the pasta ones). I could be considered as an highly irregular artist, as I sometimes crave drawing and painting in the next minute, ending up using the back of a pizza box, or anything close that will act as a spontaneous medium. I like blues, jazz root, some folk, and other music as well. I play some guitar (always the same blues rhythm over and over again), but I'm better with a harmonica. 
 
-I also like screwdrivers, and no I'm not talking about the drink (the actual handtool; although I do like the drink too), especially when they have a wooden handle. 
+I also like screwdrivers, and no I'm not talking about the drink, but the actual handtool (although I do like the drink too), especially when they have a wooden handle. 
 
 \
 

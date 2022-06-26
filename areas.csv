@@ -1,14 +1,21 @@
-Area;Type;Description;lat;long
-Caw Ridge;Fieldwork;Behavioral observations and captures of mountain goats, trapping hoary marmots (2015-2016-2017-2018);54.063036;-119.382801
-Anticosti Island;Fieldwork;Recorded morphometric measurements on harvested white-tailed deer (2016);49.831430;-64.340059
-Lake-Temiscouata National Park;Fieldwork;"Intensive sampling of white-tailed deer habitat all over the park (80 stations; 2012-2013)";47.740993;-68.799932
-Tromsø, Norway;Conference;Gave seminar and attended Citizen Science workshop led by Aminor research group (2019);69.648977;18.955192
-Rimouski;Studies;Bachelor in biology, concentration in wildlife management and habitats (2016);48.448891;-68.524030
-La Pocatière;Studies;Wildlife techniques in bioecology (2014);47.367826;-70.040363
-Fredericton;Conference;Canadian society of ecology and evolution (2019);45.959225;-66.640351
-Gaspésie National Park;Fieldwork;Behavioral observations of caribou, sampling of caribou habitat (2014);49.001124;-66.012424
-Quebec;Studies;Master in biology (2020);46.779940;-71.276514
-Vancouver Island;Fieldwork;2 days of volunteering for the Marmot Recovery Project (2016);48.939399;-124.294082
-La Pocatière and surroundings;Fieldwork;Waterfowl survey before and after hunting season opening (2013);47.402181;-70.028447
-Jasper National Park;Fieldwork;Tried to recover GPS collars (2015);52.754804;-118.179472
-Ram Mountain ;Fieldwork;Two-days visits of related long-term research programm on Bighorn sheep (2015-2016-2017);52.356230;-115.789264
+Area,Type,Description,lat,long
+Caw Ridge,Fieldwork,"Behavioral observations and captures of mountain goats, trapping hoary marmots (2015-2016-2017-2018)",54.063036,-119.382801
+Anticosti Island,Fieldwork,Recorded morphometric measurements on harvested white-tailed deer (2016),49.83143,-64.340059
+Lake-Temiscouata National Park,Fieldwork,Intensive sampling of white-tailed deer habitat all over the park (80 stations; 2012-2013),47.740993,-68.799932
+"Tromsø, Norway",Studies,"PhD Research stay (2022),  Seminar and attended Citizen Science workshop led by Aminor research group (2019)",69.648977,18.955192
+Rimouski,Studies,"Bachelor in biology, concentration in wildlife management and habitats (2016)",48.448891,-68.52403
+La Pocatière,Studies,Wildlife techniques in bioecology (2014),47.367826,-70.040363
+Fredericton,Conference,Canadian society of ecology and evolution (2019),45.959225,-66.640351
+Gaspésie National Park,Fieldwork,"Behavioral observations of caribou, sampling of caribou habitat (2014)",49.001124,-66.012424
+Québec,Studies,Master in biology (2020),46.77994,-71.276514
+Vancouver Island,Fieldwork,2 days of volunteering for the Marmot Recovery Project (2016),48.939399,-124.294082
+La Pocatière and surroundings,Fieldwork,Waterfowl survey before and after hunting season opening (2013),47.402181,-70.028447
+Jasper National Park,Fieldwork,Tried to recover GPS collars (2015),52.754804,-118.179472
+Ram Mountain ,Fieldwork,Two-days visits of related long-term research programm on Bighorn sheep (2015-2016-2017),52.35623,-115.789264
+La Jacques-Cartier / Portneuf,Fieldwork,"Wildlife technician responsible for all fielwork duties related to Ya’nienhonhndeh protected area project, for huron-wendat Nation (2020)",47.492683,-71.909277
+"Boston, USA",One week school,Near-term ecological forecasting school. More info on ecoforecast.org/nefi2022 (2022),42.35029301,-71.10591099
+Sherbrooke,Conference,Quebec Society for Biological Study of Behavior - (Title French translated) attending - 2021,45.37842176,-71.92873719
+Trois-Rivières,Conference,Quebec Society for Biological Study of Behavior - (Title French translated) attending - 2018,46.34663304,-72.5784137
+Montreal,Conference,Quebec Society for Biological Study of Behavior - (Title French translated) poster - 2019,45.50335601,-73.5795329
+Québec,Conference,Quebec Society for Biological Study of Behavior - (Title French translated) poster - 2015,46.77994,-71.276514
+Ottawa,Conference,Quebec Society for Biological Study of Behavior - (Title French translated) talk - 2017,45.41998647,-75.68984102
